@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+    <!--
+    android:typeface="normal":设置字体类型
+    android:track="":设置开关的轨迹
+    android:textOff="开"：设置开关checked的文字
+    android:textOn="关"：设置开关关闭时的文字
+    android:thumb="":设置开关的图片
+    android:switchMinWidth=""：开关最小宽度
+    android:switchPadding="":设置开关 与文字的空白距离
+    android:switchTextAppearance="":设置文本的风格
+    android:checked="":设置初始选中状态
+    android:splitTrack="true":是否设置一个间隙，让滑块与底部图片分隔
+    -->
+    <TextView
+        android:id="@+id/switch_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="switch:" />
+    <Switch
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/switch_tv"
+        android:id="@+id/switch1"
+        android:typeface="normal"
+        android:textOff="开"
+        android:textOn="关"
+        android:switchMinWidth="40dp"
+        android:switchPadding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/text"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
+    <TextView
+        android:layout_below="@+id/text"
+        android:id="@+id/switch_compat_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="switchCompat:" />
+    <!--<android.support.v7.widget.SwitchCompat
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/switch_compat_tv"
+        android:id="@+id/switch_compat"
+        android:typeface="normal"
+        android:switchMinWidth="40dp"
+        android:switchPadding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />-->
+    <android.support.v7.widget.SwitchCompat
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/switch_compat_tv"
+        android:id="@+id/switch_compat"
+        android:typeface="normal"
+        android:theme="@style/mySwitch"
+        android:switchMinWidth="40dp"
+        android:switchPadding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/text1"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/switch_compat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
+</RelativeLayout>
