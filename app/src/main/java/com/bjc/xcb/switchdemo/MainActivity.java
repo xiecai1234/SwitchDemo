@@ -6,11 +6,15 @@ import android.support.v7.widget.SwitchCompat;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener{
     private Switch aSwitch;
     private SwitchCompat aSwitchCompat;
     private TextView text1,text2,switchText,switchCompatText;
+    private ToggleButton tb;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +28,20 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         //设置Switch事件监听
         aSwitch.setOnCheckedChangeListener(this);
         aSwitchCompat.setOnCheckedChangeListener(this);
+
+
+        tb = (ToggleButton)findViewById(R.id.togglebutton);
+        tb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+                if(isChecked){
+                    Toast.makeText(MainActivity.this, "it's on now", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(MainActivity.this, "it's off now", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
 
     }
 

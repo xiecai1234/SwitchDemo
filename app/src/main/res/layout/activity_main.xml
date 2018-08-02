@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingBottom="10dp"
     android:paddingLeft="10dp"
@@ -21,11 +22,13 @@
     android:splitTrack="true":是否设置一个间隙，让滑块与底部图片分隔
     -->
     <TextView
+        android:visibility="gone"
         android:id="@+id/switch_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="switch:" />
     <Switch
+        android:visibility="gone"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/switch_tv"
         android:id="@+id/switch1"
@@ -37,6 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <TextView
+        android:visibility="gone"
         android:id="@+id/text"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/switch1"
@@ -44,6 +48,7 @@
         android:layout_height="wrap_content"
         android:text="Hello World!" />
     <TextView
+        android:visibility="gone"
         android:layout_below="@+id/text"
         android:id="@+id/switch_compat_tv"
         android:layout_width="wrap_content"
@@ -59,6 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />-->
     <android.support.v7.widget.SwitchCompat
+        android:visibility="gone"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/switch_compat_tv"
         android:id="@+id/switch_compat"
@@ -69,10 +75,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <TextView
+        android:visibility="gone"
         android:id="@+id/text1"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/switch_compat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!" />
-</RelativeLayout>
+    <ToggleButton
+        android:visibility="gone"
+        android:id="@+id/togglebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toggle_drawable_selector"
+        android:textOn="@null"
+        android:textOff="@null"/>
+
+    <com.bjc.xcb.switchdemo.SwitchButton
+        android:layout_marginTop="20dp"
+        android:layout_width="60dp"
+        android:layout_height="40dp" />
+</LinearLayout>
